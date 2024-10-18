@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/main_24"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/course"
+        android:icon="@drawable/course_24"
+        android:title="Cursos" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_24"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings_24"
+        android:title="Configuracion" />
+</menu>

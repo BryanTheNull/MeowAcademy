@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="purpleMain">#5e17eb</color>
+    <color name="lightGray">#F5F5F5</color>
+    <color name="cardBackground">#E0E0E0</color> <!-- Color de fondo de las tarjetas -->
+    <color name="darkGray">#707070</color>
+</resources>
