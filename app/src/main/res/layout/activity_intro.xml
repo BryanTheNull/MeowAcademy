@@ -9,7 +9,7 @@
         android:id="@+id/logoIntro"
         android:layout_width="400dp"
         android:layout_height="400dp"
-        android:src="@drawable/libro"
+        android:src="@drawable/logomeowacademy"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
