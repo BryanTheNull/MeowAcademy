@@ -31,7 +31,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/back"
-                        android:onClick="onClickHome"/>
+                        android:onClick="onClickHome" />
 
                     <TextView
                         android:layout_width="wrap_content"
