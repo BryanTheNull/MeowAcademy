@@ -52,6 +52,7 @@
             android:contentDescription="Imagen de perfil" />
 
             <TextView
+                android:id="@+id/nombreUsuario"
                 android:layout_width="160dp"
                 android:layout_height="25dp"
                 android:textStyle="bold"
@@ -76,18 +77,23 @@
                 android:layout_gravity="center">
 
                 <Button
+                    android:id="@+id/new_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nueva imagen"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:onClick="onClickNewImage"/>
 
                 <Button
+                    android:id="@+id/new_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nuevo nombre"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:onClick="onClickNewName"/>
 
                 <Button
+                    android:id="@+id/new_biography"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nueva biografia"
@@ -101,89 +107,177 @@
                 android:src="@drawable/separador"
                 android:layout_marginTop="5dp"/>
 
+
+            <!-- Texto Descriptivo -->
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Correo electrónico:"
-                android:textStyle="bold"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Ingresa tu correo"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="Crear mi propio curso"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edad:"
-                android:textStyle="bold"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Ingresa tu edad"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sexo"
-                android:textStyle="bold"
-                android:layout_marginStart="24dp"
+                android:text="Crea y comparte tus cursos con miles de usuarios. ¡Conviértete en un creador de contenido educativo y ayuda a otros a aprender!"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="12dp"/>
+                android:gravity="center"/>
+
+            <!-- Formulario de Creación de Curso -->
+            <EditText
+                android:id="@+id/editTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:hint="ID del Curso"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Nombre del Curso" />
+
+            <EditText
+                android:id="@+id/editTextDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción del Curso"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categria del curso:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"/>
 
             <Spinner
-                android:id="@+id/spinner_sexo"
+                android:id="@+id/spinnerCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/sexo_opcion"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:entries="@array/category_options" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Correo electrónico:"
+                android:text="Duracion del curso:"
                 android:textStyle="bold"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginStart="24dp"/>
 
-            <EditText
-                android:id="@+id/edit_email"
+            <Spinner
+                android:id="@+id/spinnerDuration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Ingresa tu correo"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="16dp"
+                android:entries="@array/duration_options" />
 
-            <Button
+            <!-- Selector de severidad del problema -->
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enviar formulario"
+                android:text="Dificultad del curso:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:entries="@array/difficulty_options" />
+
+
+            <!-- Botones CRUD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="center">
+
+                <!-- Botón Crear Curso -->
+                <Button
+                    android:id="@+id/button_create_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear Curso"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    android:onClick="onClickAgregarCurso"/>
+
+                <!-- Botón Modificar Curso -->
+                <Button
+                    android:id="@+id/button_update_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modificar Curso"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    android:onClick="onClickModificarCurso"/>
+
+                <!-- Botón Eliminar Curso -->
+                <Button
+                    android:id="@+id/button_delete_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar Curso"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:onClick="onClickEliminarCurso"/>
+            </LinearLayout>
+
+
+
+            <!-- Lista de cursos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
+                android:text="Listado de cursos creados"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ListView
+                    android:id="@+id/listLista"
+                    android:layout_width="match_parent"
+                    android:layout_height="385dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
-                android:src="@drawable/separador"
-                android:layout_marginTop="5dp"/>
-
+                android:layout_marginTop="5dp"
+                android:src="@drawable/separador" />
 
             <TextView
                 android:layout_width="260dp"
@@ -203,10 +297,8 @@
                 android:layout_marginBottom="100dp"
                 android:onClick="onClickMap"/>
 
-
-
-
         </LinearLayout>
+
     </ScrollView>
     <!-- BARRA DE NAVEGACION -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

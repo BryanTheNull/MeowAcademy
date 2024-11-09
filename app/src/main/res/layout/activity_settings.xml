@@ -150,25 +150,157 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                />
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Versión 1.0.0"
                 android:textSize="14sp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:layout_marginBottom="15px"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Acerca de" />
+                android:text="Acerca de"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contactar soporte" />
+
+            <!-- Sección 4.5: Formulario de soporte -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Envia tu ticket para soporte"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Campo para el nombre-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/edit_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Ingresa tu nombre"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Campo para el correo electrónico -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo electrónico:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Ingresa tu correo"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Campo para el numero de telefono-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de teléfono:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/edit_numero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Ingresa tu número de teléono"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Campo para la descripción del problema -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción del problema:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Describe el problema que estás experimentando"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Selector de severidad del problema -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Severidad del problema:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_severity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:entries="@array/severity_options"/>
+
+            <!-- Selector de categoría del problema -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoría del problema:"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:entries="@array/error_options"/>
+
+            <!-- Botón de enviar -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar ticket"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:onClick="onClicksendTicket"/>
 
             <ImageView
                 android:layout_width="match_parent"

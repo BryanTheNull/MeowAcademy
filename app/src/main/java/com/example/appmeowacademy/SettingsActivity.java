@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,5 +57,39 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void onClickCerrarSesion(View view){
         finish();
+    }
+
+    public void onClicksendTicket(View view){
+        // Obtener las referencias de los campos del formulario
+        EditText nombreField = findViewById(R.id.edit_nombre);
+        EditText emailField = findViewById(R.id.edit_email);
+        EditText telefonoField = findViewById(R.id.edit_numero);
+        EditText descriptionField = findViewById(R.id.edit_description);
+        Spinner severitySpinner = findViewById(R.id.spinner_severity);
+        Spinner categorySpinner = findViewById(R.id.spinner_category);
+
+        // Validar que los campos requeridos no estén vacíos
+        String nombre = nombreField.getText().toString();
+        String email = emailField.getText().toString();
+        String telefono = telefonoField.getText().toString();
+        String description = descriptionField.getText().toString();
+
+        if (nombre.isEmpty() || email.isEmpty() || telefono.isEmpty() || description.isEmpty()) {
+            // Si algún campo requerido está vacío, muestra un mensaje de advertencia
+            Toast.makeText(this, "Por favor, completa todos los campos antes de enviar el ticket", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Mostrar un mensaje de confirmación al usuario
+        Toast.makeText(this, "Ticket enviado con éxito. Nos pondremos en contacto contigo pronto.", Toast.LENGTH_LONG).show();
+
+        // Limpiar los campos del formulario
+        nombreField.setText("");
+        emailField.setText("");
+        telefonoField.setText("");
+        descriptionField.setText("");
+        severitySpinner.setSelection(0);
+        categorySpinner.setSelection(0);
+
     }
 }
