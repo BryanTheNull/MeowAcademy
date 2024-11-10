@@ -62,7 +62,7 @@ public class CourseActivity extends AppCompatActivity {
     public void onClickGoogle(View view) {
         // Intent para abrir el navegador con la URL del curso
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("https://www.coursera.org/courseraplus/?utm_medium=sem&utm_source=gg&utm_campaign=B2C_LATAM_coursera_FTCOF_courseraplus&campaignid=20844412474&adgroupid=159999536361&device=c&keyword=coursera&matchtype=b&network=g&devicemodel=&adposition=&creativeid=683667892738&hide_mobile_promo&gad_source=1&gclid=CjwKCAjwjsi4BhB5EiwAFAL0YJHzFN03OR6k1T62YoInjTaeWqIrT04ppKcSVfsFn7wtKRLJBTcEhRoCYqwQAvD_BwE"));
+        intent.setData(Uri.parse(""));
         startActivity(intent);
     }
 }

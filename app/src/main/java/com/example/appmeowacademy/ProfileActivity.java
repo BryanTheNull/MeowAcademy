@@ -17,6 +17,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+//Librerias de video
+import android.net.Uri;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+
+
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -77,8 +84,16 @@ public class ProfileActivity extends AppCompatActivity {
                 return false;
             }
         });
-
         cargarLista();
+        VideoView videoView = findViewById(R.id.videoView);
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.nosotros;
+        Uri uri = Uri.parse(videoPath);
+        videoView.setVideoURI(uri);
+
+        MediaController mediaController = new MediaController(this);
+        videoView.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView);
+        videoView.start();
 
     }
 
@@ -220,6 +235,8 @@ public class ProfileActivity extends AppCompatActivity {
         limpiarFormulario();
 
     }
+
+
 
 
 

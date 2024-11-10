@@ -280,6 +280,29 @@
                 android:src="@drawable/separador" />
 
             <TextView
+                android:layout_width="160dp"
+                android:layout_height="20dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Sobre Nosotros"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="370dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/separador" />
+
+            <TextView
                 android:layout_width="260dp"
                 android:layout_height="50dp"
                 android:textStyle="bold"
@@ -296,6 +319,12 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="100dp"
                 android:onClick="onClickMap"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/separador" />
 
         </LinearLayout>
 

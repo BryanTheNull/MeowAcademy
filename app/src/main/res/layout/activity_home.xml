@@ -282,15 +282,17 @@
 
 
             <!-- Barra de curso-->
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoJava"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:orientation="vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:onClick="onClickReproducirCurso"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -299,16 +301,16 @@
                     android:src="@drawable/java"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/nombreCurso1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="Java programming and software\nengineering fundamentals"
                     android:textColor="@color/black"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -320,17 +322,18 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@id/nombreCurso1"
-                    app:layout_constraintTop_toBottomOf="@id/nombreCurso1"/>
+                    app:layout_constraintTop_toBottomOf="@id/nombreCurso1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoPython"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle"
+                android:onClick="onClickReproducirCurso"
                 android:orientation="vertical">
 
                 <ImageView
@@ -365,6 +368,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoMySql"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="vertical"
@@ -372,7 +376,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:onClick="onClickReproducirCurso">
 
                 <ImageView
                     android:layout_width="60dp"

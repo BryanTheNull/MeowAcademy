@@ -113,8 +113,8 @@ public class MapActivity extends AppCompatActivity {
 
 
     }
-    public void onClickHome(View view){
-        Intent intent = new Intent(this, HomeActivity.class);
+    public void onClickProfile(View view){
+        Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
         finish();
     }

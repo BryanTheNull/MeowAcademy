@@ -58,10 +58,22 @@ public class HomeActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onClickGoogle(View view) {
+    public void onClickReproducirCurso(View view) {
         // Intent para abrir el navegador con la URL del curso
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("https://www.coursera.org/courseraplus/?utm_medium=sem&utm_source=gg&utm_campaign=B2C_LATAM_coursera_FTCOF_courseraplus&campaignid=20844412474&adgroupid=159999536361&device=c&keyword=coursera&matchtype=b&network=g&devicemodel=&adposition=&creativeid=683667892738&hide_mobile_promo&gad_source=1&gclid=CjwKCAjwjsi4BhB5EiwAFAL0YJHzFN03OR6k1T62YoInjTaeWqIrT04ppKcSVfsFn7wtKRLJBTcEhRoCYqwQAvD_BwE"));
+        Intent intent = new Intent(this, VideoActivity.class);
+
+        // Verificar cuál contenedor fue presionado y establecer el enlace adecuado
+        if(view.getId() == R.id.cursoJava){
+            intent.putExtra("video_link", "W86KTBSiX2o");
+        } else if (view.getId() == R.id.cursoPython) {
+            intent.putExtra("video_link", "nKPbfIU442g");
+        } else if (view.getId() == R.id.cursoMySql) {
+            intent.putExtra("video_link", "DFg1V-rO6Pg");
+        }
         startActivity(intent);
+        finish();
     }
+
+
+
 }
