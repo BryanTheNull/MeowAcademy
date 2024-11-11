@@ -332,7 +332,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
+                android:background="@drawable/banner_background2"
                 android:onClick="onClickReproducirCurso"
                 android:orientation="vertical">
 
@@ -375,7 +375,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
+                android:background="@drawable/banner_background4"
                 android:onClick="onClickReproducirCurso">
 
                 <ImageView
@@ -422,7 +422,8 @@
         app:menu="@menu/barra_navegacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClickButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

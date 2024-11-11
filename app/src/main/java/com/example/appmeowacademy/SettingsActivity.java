@@ -56,10 +56,13 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void onClickCerrarSesion(View view){
+        onClickButton();
         finish();
     }
 
     public void onClicksendTicket(View view){
+        onClickButton();
+
         // Obtener las referencias de los campos del formulario
         EditText nombreField = findViewById(R.id.edit_nombre);
         EditText emailField = findViewById(R.id.edit_email);
@@ -90,6 +93,12 @@ public class SettingsActivity extends AppCompatActivity {
         descriptionField.setText("");
         severitySpinner.setSelection(0);
         categorySpinner.setSelection(0);
-
     }
+
+    public void onClickButton(){
+        // Instanciar clase de reproductor de sonido
+        SoundMediaPlayer soundMediaPlayer = new SoundMediaPlayer(this);
+        soundMediaPlayer.playSound();
+    }
+
 }

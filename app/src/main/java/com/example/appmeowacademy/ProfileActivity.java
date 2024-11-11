@@ -98,6 +98,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickMap(View view){
+        onClickButton();
+
         Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
         finish();
@@ -127,6 +129,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickAgregarCurso(View view){
+        onClickButton();
+
         DataHelper dh = new DataHelper(this);
         SQLiteDatabase db = dh.getWritableDatabase();
         ContentValues reg = new ContentValues();
@@ -166,6 +170,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickEliminarCurso(View view){
+        onClickButton();
+
         DataHelper dh = new DataHelper(this);
         SQLiteDatabase db = dh.getWritableDatabase();
 
@@ -192,6 +198,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onClickModificarCurso(View view){
+        onClickButton();
+
         DataHelper dh = new DataHelper(this);
         SQLiteDatabase db = dh.getWritableDatabase();
 
@@ -236,6 +244,11 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
+    public void onClickButton(){
+        // Instanciar clase de reproductor de sonido
+        SoundMediaPlayer soundMediaPlayer = new SoundMediaPlayer(this);
+        soundMediaPlayer.playSound();
+    }
 
 
 

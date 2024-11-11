@@ -48,14 +48,18 @@
             </LinearLayout>
 
             <!-- Barra de curso-->
+
+            <!-- Barra de curso-->
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoAlgoritmos"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:orientation="vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:background="@drawable/banner_background2"
+                android:onClick="onClickReproducirCurso"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -64,16 +68,16 @@
                     android:src="@drawable/algoritmos"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/nombreCurso11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="Data Structures and Algorithms"
                     android:textColor="@color/black"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,11 +89,11 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@id/nombreCurso11"
-                    app:layout_constraintTop_toBottomOf="@id/nombreCurso11"/>
+                    app:layout_constraintTop_toBottomOf="@id/nombreCurso11" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Barra de curso-->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoAndroid"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="vertical"
@@ -97,7 +101,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:onClick="onClickReproducirCurso">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -132,14 +136,15 @@
 
             <!-- Barra de curso-->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoCloud"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:background="@drawable/banner_background4"
+                android:onClick="onClickReproducirCurso">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -174,14 +179,15 @@
 
             <!-- Barra de curso-->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoHacking"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:background="@drawable/banner_background2"
+                android:onClick="onClickReproducirCurso">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -214,16 +220,16 @@
                     app:layout_constraintTop_toBottomOf="@id/nombreCurso14"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Barra de curso-->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoGame"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:orientation="vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:background="@drawable/banner_background3"
+                android:onClick="onClickReproducirCurso"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -232,16 +238,16 @@
                     android:src="@drawable/videojuegos"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/nombreCurso15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="Game Development in Unity:\nAn Introduction"
                     android:textColor="@color/black"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -253,25 +259,25 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@id/nombreCurso15"
-                    app:layout_constraintTop_toBottomOf="@id/nombreCurso15"/>
+                    app:layout_constraintTop_toBottomOf="@id/nombreCurso15" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Barra de curso-->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cursoLinux"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:orientation="vertical"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/banner_background1"
-                android:onClick="onClickGoogle">
+                android:background="@drawable/banner_background5"
+                android:onClick="onClickReproducirCurso">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/java"
+                    android:src="@drawable/linux"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
@@ -315,6 +321,7 @@
         app:menu="@menu/barra_navegacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClickButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

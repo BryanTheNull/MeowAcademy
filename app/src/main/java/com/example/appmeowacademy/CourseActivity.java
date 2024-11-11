@@ -54,15 +54,42 @@ public class CourseActivity extends AppCompatActivity {
     }
 
     public void onClickHome(View view){
+        // Reproducir sonido al presioanr el boton
+        onClickButton();
+
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         finish();
     }
 
-    public void onClickGoogle(View view) {
+    public void onClickReproducirCurso(View view) {
+        // Reproducir sonido al presioanr el boton
+        onClickButton();
+
         // Intent para abrir el navegador con la URL del curso
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(""));
+        Intent intent = new Intent(this, VideoActivity.class);
+
+        // Verificar cuál contenedor fue presionado y establecer el enlace adecuado
+        if(view.getId() == R.id.cursoAlgoritmos){
+            intent.putExtra("video_link", "sQLn2asTefo");
+        } else if (view.getId() == R.id.cursoAndroid) {
+            intent.putExtra("video_link", "H8tykt3pKTU");
+        } else if (view.getId() == R.id.cursoCloud) {
+            intent.putExtra("video_link", "h4Af5bbFAq0");
+        } else if (view.getId() == R.id.cursoHacking) {
+            intent.putExtra("video_link", "spMYZHepjko");
+        }  else if (view.getId() == R.id.cursoGame) {
+            intent.putExtra("video_link", "3TnG0lbHEco");
+        } else if (view.getId() == R.id.cursoLinux) {
+            intent.putExtra("video_link", "L906Kti3gzE");
+        }
         startActivity(intent);
+        finish();
+    }
+
+    public void onClickButton(){
+        // Instanciar clase de reproductor de sonido
+        SoundMediaPlayer soundMediaPlayer = new SoundMediaPlayer(this);
+        soundMediaPlayer.playSound();
     }
 }

@@ -114,8 +114,17 @@ public class MapActivity extends AppCompatActivity {
 
     }
     public void onClickProfile(View view){
+        onClickButton();
+
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
         finish();
     }
+
+    public void onClickButton(){
+        // Instanciar clase de reproductor de sonido
+        SoundMediaPlayer soundMediaPlayer = new SoundMediaPlayer(this);
+        soundMediaPlayer.playSound();
+    }
+
 }

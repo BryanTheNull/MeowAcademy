@@ -50,7 +50,7 @@
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Modo oscuro"/>
+                android:text="Modo oscuro" />
 
             <Switch
                 android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
                 android:id="@+id/switch_vibration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vibración"/>
+                android:text="Vibración" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -163,12 +163,14 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Acerca de"/>
+                android:text="Acerca de"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contactar soporte" />
+                android:text="Contactar soporte"
+                android:onClick="onClickButton"/>
 
             <!-- Sección 4.5: Formulario de soporte -->
             <TextView
@@ -349,7 +351,8 @@
         app:menu="@menu/barra_navegacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClickButton"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,6 +20,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+
         // Enlazo la barra de navegacion a la variable creada
         barraNavegacion = findViewById(R.id.barraNavegacion);
 
@@ -53,12 +55,18 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onClickCours(View view){
+        // Reproducir sonido al presionar el boton
+        onClickButton();
+
         Intent intent = new Intent(this, CourseActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void onClickReproducirCurso(View view) {
+        // Reproducir sonido al presioanr el boton
+        onClickButton();
+
         // Intent para abrir el navegador con la URL del curso
         Intent intent = new Intent(this, VideoActivity.class);
 
@@ -72,6 +80,12 @@ public class HomeActivity extends AppCompatActivity {
         }
         startActivity(intent);
         finish();
+    }
+
+    public void onClickButton(){
+        // Instanciar clase de reproductor de sonido
+        SoundMediaPlayer soundMediaPlayer = new SoundMediaPlayer(this);
+        soundMediaPlayer.playSound();
     }
 
 

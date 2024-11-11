@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:text="Nueva imagen"
                     android:textSize="12sp"
-                    android:onClick="onClickNewImage"/>
+                    android:onClick="onclickButton"/>
 
                 <Button
                     android:id="@+id/new_name"
@@ -90,14 +90,15 @@
                     android:layout_height="wrap_content"
                     android:text="Nuevo nombre"
                     android:textSize="12sp"
-                    android:onClick="onClickNewName"/>
+                    android:onClick="onClickButton"/>
 
                 <Button
                     android:id="@+id/new_biography"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nueva biografia"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp"
+                    android:onClick="onClickButton"/>
 
             </LinearLayout>
 
@@ -327,8 +328,8 @@
                 android:src="@drawable/separador" />
 
         </LinearLayout>
-
     </ScrollView>
+
     <!-- BARRA DE NAVEGACION -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/barraNavegacion"
@@ -337,6 +338,7 @@
         app:menu="@menu/barra_navegacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClickButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

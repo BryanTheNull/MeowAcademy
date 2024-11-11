@@ -31,6 +31,8 @@ public class VideoActivity  extends AppCompatActivity {
     }
 
     public void onClickCourse(View view){
+        onClickButton();
+
         Intent intent = new Intent(this, CourseActivity.class);
         startActivity(intent);
         finish();
@@ -43,5 +45,11 @@ public class VideoActivity  extends AppCompatActivity {
         String videoUrl = "https://www.youtube.com/embed/" + link;
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(videoUrl);
+    }
+
+    public void onClickButton(){
+        // Instanciar clase de reproductor de sonido
+        SoundMediaPlayer soundMediaPlayer = new SoundMediaPlayer(this);
+        soundMediaPlayer.playSound();
     }
 }

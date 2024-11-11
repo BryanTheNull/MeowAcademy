@@ -26,7 +26,7 @@
                     android:layout_height="25dp"
                     android:src="@drawable/back"
                     android:onClick="onClickCourse"
-                    tools:ignore="MissingConstraints" />
+                    tools:ignore="MissingConstraints"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,7 +42,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
@@ -52,22 +51,11 @@
             <!--Reproducto de curso-->
             <WebView
                 android:id="@+id/webView"
-                android:layout_width="400dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_marginTop="5dp"
                 android:layout_gravity="center">
             </WebView>
-
         </LinearLayout>
     </ScrollView>
-    <!-- BARRA DE NAVEGACION -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/barraNavegacion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:menu="@menu/barra_navegacion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
